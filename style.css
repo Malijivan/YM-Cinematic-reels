@@ -1,0 +1,179 @@
+/* Basic Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
+
+/* Simple Navbar */
+nav {
+    background: #111;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    z-index: 1000;
+}
+
+/* --- Attractive & Modern Navbar --- */
+nav {
+    background: rgba(17, 17, 17, 0.8); /* Thoda transparent black */
+    backdrop-filter: blur(10px); /* Background ko blur karega (Glass effect) */
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Patli shining line */
+}
+
+nav .logo { 
+    font-size: 26px; 
+    font-weight: 800; 
+    letter-spacing: 3px; 
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #fff, #aaa); /* Logo par gradient effect */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul { display: flex; list-style: none; }
+
+nav ul li { margin-left: 25px; }
+
+nav ul li a { 
+    color: #ddd; 
+    text-decoration: none; 
+    font-size: 15px; 
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Animation ke liye */
+    position: relative;
+}
+
+/* Hover Effect: Text chamkega aur niche line aayegi */
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Mouse le jaane par line draw hogi */
+}
+/* Parallax Section */
+.parallax {
+    background-image: url("assets/bgimg.jpeg"); /* Apni photo se badlein */
+    height: 60vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax h1 {
+    color: white;
+    background: rgba(0,0,0,0.6);
+    padding: 10px 20px;
+    font-size: 3rem;
+}
+
+/* Video Grid for Gallery */
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 5%;
+}
+
+.video-card { background: white; border: 1px solid #ddd; padding: 10px; border-radius: 5px; }
+
+.video-card video { width: 100%; border-radius: 5px; }
+
+/* Footer & Social Icons */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.contact-info { margin-bottom: 15px; font-size: 14px; }
+/* Contact Page Specific Styles */
+.contact-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 50px auto;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    flex-wrap: wrap; /* Mobile friendly banane ke liye */
+}
+
+.contact-info-section {
+    flex: 1;
+    background: #111;
+    color: white;
+    padding: 40px;
+    min-width: 300px;
+}
+
+.contact-info-section h2 { color: #fff; margin-bottom: 20px; font-size: 2rem; }
+
+.info-item { margin-bottom: 20px; font-size: 1.1rem; }
+
+.social-box { margin-top: 40px; border-top: 1px solid #333; padding-top: 20px; }
+
+.contact-form-section {
+    flex: 1.5;
+    padding: 40px;
+    min-width: 300px;
+}
+
+.contact-form-section input, 
+.contact-form-section select, 
+.contact-form-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-form-section button {
+    background: #111;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contact-form-section button:hover {
+    background: #444;
+}
